@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h2>PetStore</h2>
+<a href="admin.html">Dashboard</a>
+<a href="index.html">Store</a>
+<a onclick="logout()">Logout</a>
+</div>
+
+<div class="main">
+
+<h1>Admin Dashboard</h1>
+
+<div class="card">
+<h3>Add Product</h3>
+<input id="name" placeholder="Product Name">
+<input id="price" placeholder="Price">
+<input id="stock" placeholder="Stock">
+<input id="image" placeholder="Image URL">
+<button onclick="saveProduct()">Save Product</button>
+</div>
+
+<div id="list" class="product-grid"></div>
+
+</div>
+</div>
+
+<script src="js/auth.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

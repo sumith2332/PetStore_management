@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+
+<div class="navbar">
+<div class="brand">Your Cart</div>
+<a href="index.html">Back</a>
+</div>
+
+<div class="card">
+<h2>Cart Items</h2>
+
+<div id="cartItems"></div>
+
+<h3>Total: ₹<span id="total">0</span></h3>
+
+<button class="pay-btn" onclick="payNow()">Pay Now</button>
+
+</div>
+
+<script>
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+let cartDiv = document.getElementById("cartItems");
+
+let total = 0;
+
+function loadCart(){
+
+cartDiv.innerHTML = "";
+
+total = 0;
+
+cart.forEach((item, index)=>{
+
+total += Number(item.price);
+
+cartDiv.innerHTML += `
+<div class="product">
+<img src="${item.image}" width="80">
+<h3>${item.name}</h3>
+<p>₹${item.price}</p>
+
+<button onclick="removeItem(${index})"
+style="background:red;color:white;border:none;padding:5px 10px;cursor:pointer;">
+Remove
+</button>
+
+</div>
+`;
+
+});
+
+document.getElementById("total").innerText = total;
+
+localStorage.setItem("cartTotal", total);
+
+}
+function removeItem(index){
+
+cart.splice(index,1);
+
+localStorage.setItem("cart", JSON.stringify(cart));
+
+loadCart();
+
+}
+
+loadCart();
+
+</script>
+
+<script src="js/payment.js"></script>
+
+</body>
+</html>
+

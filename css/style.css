@@ -1,0 +1,142 @@
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+background:linear-gradient(120deg,#0f172a,#1e293b);
+color:white;
+min-height:100vh;
+}
+
+/* NAVBAR */
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 30px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(10px);
+}
+
+.brand{
+font-size:22px;
+font-weight:700;
+}
+
+.nav-links a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+padding:60px 20px;
+}
+
+.hero h1{
+font-size:36px;
+}
+
+/* GRID */
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+padding:20px;
+}
+
+/* CARD */
+.card{
+background:rgba(255,255,255,0.05);
+padding:20px;
+border-radius:12px;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.product{
+background:rgba(255,255,255,0.05);
+padding:15px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.product:hover{
+transform:translateY(-5px) scale(1.02);
+}
+
+/* BUTTON */
+button{
+background:#3b82f6;
+border:none;
+padding:10px 15px;
+border-radius:8px;
+color:white;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#2563eb;
+}
+
+/* DASHBOARD */
+.dashboard{
+display:flex;
+}
+
+.sidebar{
+width:220px;
+background:#020617;
+padding:20px;
+height:100vh;
+}
+
+.sidebar a{
+display:block;
+margin:10px 0;
+color:white;
+text-decoration:none;
+}
+
+.main{
+flex:1;
+padding:20px;
+}
+
+/* LOGIN */
+.login-body{
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+}
+
+.login-box{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:12px;
+}
+
+input{
+width:100%;
+padding:10px;
+margin-top:10px;
+border-radius:6px;
+border:none;
+}
+
+.center{
+text-align:center;
+}
+
+.pay-btn{
+font-size:18px;
+padding:12px 25px;
+}
